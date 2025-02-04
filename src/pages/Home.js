@@ -5,24 +5,22 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 
-// Fade-in animation
+// Fade-in animation for text
 const fadeIn = keyframes`
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 `;
 
-// Container for the whole page
 const HomeContainer = styled.div`
-  background-color: #0d0d0d; /* Dark automotive theme */
+  background-color: #0d0d0d;
   color: #f8f8f8;
   font-family: "Playfair Display", serif;
   min-height: 100vh;
 `;
 
-// Hero Section
 const HeroSection = styled.section`
-  height: 90vh;
-  background-image: url("/assets/hero-bg.jpg"); /* Replace with an actual image */
+  height: 100vh;
+  background-image: url("/hero-bg.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -38,62 +36,103 @@ const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay to enhance text visibility */
 `;
 
 const HeroText = styled(motion.h1)`
   z-index: 10;
-  font-size: 3.5rem;
-  font-weight: 600;
-  color: #f4b400;
+  font-family: "Roboto Slab", serif; /* Stylish serif font */
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #ececec; /* Soft off-white color for headings */
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 6px;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Adds depth to text */
   animation: ${fadeIn} 1.5s ease-in-out;
 `;
 
-// About Section
+const Button = styled(motion.button)`
+  padding: 15px 30px;
+  background-color: #f4b400;
+  color: #0d0d0d;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: #e89c00;
+    transform: scale(1.05);
+  }
+`;
+
 const AboutSection = styled(motion.section)`
-  padding: 60px 20px;
+  padding: 80px 20px;
   max-width: 800px;
   margin: auto;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif; /* Clean sans-serif font */
   background: #1e1e1e;
-  border-radius: 10px;
-  padding: 40px;
+  border-radius: 12px;
+  padding: 50px;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  color: #dcdcdc; /* Light grey color for body text */
+  line-height: 1.6;
   animation: ${fadeIn} 1.5s ease-in-out;
 `;
 
-// Specialties Section
+const AboutTitle = styled.h2`
+  font-family: "Roboto Slab", serif;
+  color: #ececec; /* Light silver color */
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+`;
+
 const SpecialtiesSection = styled.section`
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 50px;
+  gap: 30px;
+  padding: 60px;
   flex-wrap: wrap;
 `;
 
 const SpecialItem = styled(motion.div)`
   background: linear-gradient(to right, #292929, #1e1e1e);
-  padding: 20px;
-  border-radius: 8px;
+  padding: 25px;
+  border-radius: 15px;
   text-align: center;
-  width: 280px;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 320px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   color: #f8f8f8;
-  
+
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
   }
 `;
 
 const SpecialItemTitle = styled.h3`
-  font-size: 1.5rem;
-  color: #f4b400;
+  font-family: "Roboto Slab", serif;
+  color: #ececec; /* Soft light silver color */
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    color: #e89c00; /* Lighter gold on hover */
+    transform: scale(1.05);
+  }
 `;
 
 const TestimonialsSection = styled.section`
@@ -104,22 +143,23 @@ const TestimonialsSection = styled.section`
 
 const Quote = styled.p`
   font-style: italic;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #f4b400;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #f4b400; /* Gold for emphasis */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 `;
 
 const CustomerName = styled.h4`
-  font-weight: bold;
-  color: #f8f8f8;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  color: #ececec; /* Soft off-white for customer names */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 `;
 
 const Home = () => {
   return (
     <HomeContainer>
       <Navbar />
-
-      {/* Hero Section */}
       <HeroSection>
         <Overlay />
         <HeroText
@@ -129,48 +169,38 @@ const Home = () => {
         >
           Welcome to Aurevra Cafe
         </HeroText>
+        <Button whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
+          Explore Menu
+        </Button>
       </HeroSection>
 
-      {/* About Section */}
       <AboutSection
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2 }}
       >
-        <h2>About Us</h2>
+        <AboutTitle>About Us</AboutTitle>
         <p>
-          Inspired by speed, precision, and craftsmanship, **Aurevra Cafe** blends the world of 
-          automobiles with gourmet coffee. Experience the thrill of high-performance coffee in 
-          an environment designed for car enthusiasts and coffee lovers alike.
+          At **Aurevra Cafe**, we blend the world of automobiles and coffee culture. 
+          Experience high-performance coffee in an ambiance designed for automotive enthusiasts.
         </p>
       </AboutSection>
 
-      {/* Specialties Section */}
       <SpecialtiesSection>
-        <SpecialItem
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.3 }}
-        >
+        <SpecialItem whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
           <SpecialItemTitle>🏎️ Turbo Espresso</SpecialItemTitle>
           <p>A high-powered espresso shot with a rich finish.</p>
         </SpecialItem>
-        <SpecialItem
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.3 }}
-        >
+        <SpecialItem whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
           <SpecialItemTitle>🚗 Vintage Latte</SpecialItemTitle>
           <p>A smooth and creamy latte, inspired by classic cars.</p>
         </SpecialItem>
-        <SpecialItem
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.3 }}
-        >
+        <SpecialItem whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
           <SpecialItemTitle>🔥 Nitro Cold Brew</SpecialItemTitle>
-          <p>Served chilled, packed with power like a turbocharged engine.</p>
+          <p>Chilled and packed with power, like a turbocharged engine.</p>
         </SpecialItem>
       </SpecialtiesSection>
 
-      {/* Testimonials Section */}
       <TestimonialsSection>
         <h2>What Our Customers Say</h2>
         <Quote>"The ambiance is like stepping into a high-end car showroom, but with the aroma of great coffee!"</Quote>
