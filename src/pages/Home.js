@@ -4,6 +4,8 @@ import styled, { keyframes } from "styled-components";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // Import Link for button navigation
+
 
 // Fade-in animation for text
 const fadeIn = keyframes`
@@ -24,6 +26,7 @@ const HeroSection = styled.section`
   background-size: cover;
   background-position: center;
   display: flex;
+  flex-direction: column; /* Stack items vertically */
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -39,30 +42,40 @@ const Overlay = styled.div`
   background: rgba(0, 0, 0, 0.4); /* Dark overlay to enhance text visibility */
 `;
 
-const HeroText = styled(motion.h1)`
+const HeroContent = styled.div`
+  position: relative;
   z-index: 10;
-  font-family: "Roboto Slab", serif; /* Stylish serif font */
-  font-size: 4.5rem;
-  font-weight: 700;
-  color: #ececec; /* Soft off-white color for headings */
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Adds depth to text */
-  animation: ${fadeIn} 1.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensures both text and button are centered */
+  gap: 20px; /* Adds spacing between heading and button */
 `;
 
-const Button = styled(motion.button)`
-  padding: 15px 30px;
+const HeroText = styled(motion.h1)`
+  z-index: 10;
+  font-family: "Roboto Slab", serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #d3a15c;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  animation: ${fadeIn} 1.5s ease-in-out;
+  margin-bottom: 20px; /* Space between text and button */
+`;
+
+const BookTableButton = styled(motion(Link))`
+  padding: 12px 24px;
   background-color: #f4b400;
   color: #0d0d0d;
   border: none;
   border-radius: 5px;
   font-size: 1.2rem;
   font-weight: bold;
-  margin-top: 30px;
-  cursor: pointer;
+  text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
-
+  z-index: 10;
+  
   &:hover {
     background-color: #e89c00;
     transform: scale(1.05);
@@ -82,6 +95,7 @@ const AboutSection = styled(motion.section)`
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
   color: #dcdcdc; /* Light grey color for body text */
   line-height: 1.6;
+  margin-top: 80px; /* Added margin-top to create space between hero and about section */
   animation: ${fadeIn} 1.5s ease-in-out;
 `;
 
@@ -169,9 +183,15 @@ const Home = () => {
         >
           Welcome to Aurevra Cafe
         </HeroText>
-        <Button whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
-          Explore Menu
-        </Button>
+        {/* Book My Table button directly under Hero Text with matching animation */}
+        <BookTableButton 
+          to="/book-table"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2 }}
+        >
+          Book My Table
+        </BookTableButton>
       </HeroSection>
 
       <AboutSection

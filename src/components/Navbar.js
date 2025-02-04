@@ -1,78 +1,61 @@
 // src/components/Navbar.js
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+// Styled navbar container
 const NavbarContainer = styled.nav`
-  position: fixed;
-  width: 100%;
-  padding: 15px 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Keeps Aurevra on the left, links centered */
   align-items: center;
-  background-color: ${(props) => (props.scrolled ? "#1a1a1a" : "transparent")};
-  transition: background-color 0.3s ease-in-out;
+  padding: 15px 40px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 100;
-  box-shadow: ${(props) => (props.scrolled ? "0 4px 10px rgba(0, 0, 0, 0.5)" : "none")};
 `;
 
-const Logo = styled.div`
-  font-size: 1.8rem;
-  font-family: "Playfair Display", serif;
-  color: #f8f8f8;
+// Brand Name Styling
+const NavbarBrand = styled(Link)`
+  font-family: "Roboto Slab", serif;
+  font-size: 2rem;
+  color: #f4b400;
+  text-decoration: none;
 `;
 
+// Navbar Links Wrapper
 const NavbarLinks = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 40px; /* Space between links */
+  align-items: center;
+  margin: auto; /* Center the links */
 `;
 
-const NavbarLink = styled(Link)`
-  color: #f8f8f8;
-  font-weight: 600;
+// Individual Navbar Links
+const NavLink = styled(Link)`
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  color: #ececec;
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease;
 
   &:hover {
     color: #f4b400;
   }
 `;
 
-const BookTableButton = styled(Link)`
-  background-color: #f4b400;
-  color: #1a1a1a;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease-in-out;
-
-  &:hover {
-    background-color: #e89c00;
-  }
-`;
-
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <NavbarContainer scrolled={scrolled}>
-      <Logo>Aurevra Cafe</Logo>
+    <NavbarContainer>
+      <NavbarBrand to="/">Aurevra</NavbarBrand>
       <NavbarLinks>
-        <NavbarLink to="/">Home</NavbarLink>
-        <NavbarLink to="/menu">Menu</NavbarLink>
-        <NavbarLink to="/about">About</NavbarLink>
-        <NavbarLink to="/contact">Contact</NavbarLink>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/menu">Menu</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </NavbarLinks>
-      <BookTableButton to="/reservation">Book a Table</BookTableButton>
     </NavbarContainer>
   );
 };
