@@ -3,7 +3,6 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 // Page Container
 const AboutContainer = styled.div`
@@ -94,7 +93,6 @@ const About = () => {
           <AboutImage src="/about-cafe.jpg" alt="Aurevra Cafe Interior" />
         </ImageContainer>
       </AboutContainer>
-      <Footer />
     </>
   );
 };

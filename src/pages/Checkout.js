@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 
 // Sample Order Items
@@ -90,7 +89,6 @@ const Checkout = () => {
         </CheckoutButton>
       </OrderSummary>
 
-      <Footer />
     </CheckoutContainer>
   );
 };

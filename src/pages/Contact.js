@@ -2,13 +2,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import { FaEnvelope, FaPhone, FaInstagram, FaFacebookF } from "react-icons/fa"; // Icons for social/contact
+import Navbar from "../components/Navbar";
 
-// Page Container
+// Page Container with Background Image
 const ContactContainer = styled.div`
-  background-color: #0d0d0d; /* Dark theme background */
+  background-image: url("/contact.jpg"); /* Set your background image here */
+  background-size: cover;
+  background-position: center;
   color: #f8f8f8;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
@@ -17,27 +18,42 @@ const ContactContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+`;
+
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Overlay for readability */
 `;
 
 const ContactTitle = styled(motion.h1)`
   font-family: "Roboto Slab", serif;
   font-size: 3rem;
   font-weight: 700;
-  color: #f4b400; /* Gold color */
+  color: #f4b400;
   text-align: center;
   margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 4px;
+  z-index: 1;
   animation: fadeIn 1s ease-in-out;
 `;
 
 const ContactForm = styled.form`
-  background-color: #292929;
+  background-color: rgba(41, 41, 41, 0.8); /* Semi-transparent form background */
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-  max-width: 600px;
   width: 100%;
+  max-width: 600px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;
 
 const InputField = styled.input`
@@ -99,6 +115,7 @@ const ContactInfoSection = styled.section`
   justify-content: center;
   gap: 40px;
   margin-top: 60px;
+  z-index: 1;
 `;
 
 const ContactInfoItem = styled.div`
@@ -139,18 +156,14 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     alert("Message sent!");
   };
 
   return (
     <ContactContainer>
+      <Overlay /> {/* Overlay for better readability */}
       <Navbar />
-      <ContactTitle
-        initial="hidden"
-        animate="visible"
-        variants={fadeIn}
-      >
+      <ContactTitle initial="hidden" animate="visible" variants={fadeIn}>
         Contact Us
       </ContactTitle>
 
@@ -173,7 +186,7 @@ const Contact = () => {
         />
         <TextArea
           name="message"
-          placeholder="Your Feedback"
+          placeholder="Your Message"
           value={formData.message}
           onChange={handleChange}
           required
@@ -192,7 +205,7 @@ const Contact = () => {
           <ContactInfoIcon>
             <FaPhone />
           </ContactInfoIcon>
-          <ContactInfoText>7416287202</ContactInfoText>
+          <ContactInfoText>(123) 456-7890</ContactInfoText>
         </ContactInfoItem>
         <ContactInfoItem>
           <ContactInfoIcon>
@@ -208,7 +221,6 @@ const Contact = () => {
         </ContactInfoItem>
       </ContactInfoSection>
 
-      <Footer />
     </ContactContainer>
   );
 };

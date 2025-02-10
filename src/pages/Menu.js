@@ -3,7 +3,6 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 // Card Layout for menu items
 const MenuContainer = styled.div`
@@ -158,7 +157,6 @@ const Menu = () => {
         </MenuItemCard>
       </MenuItemsSection>
 
-      <Footer />
     </MenuContainer>
   );
 };

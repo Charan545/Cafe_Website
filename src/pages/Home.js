@@ -3,7 +3,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; // Import Link for button navigation
 
@@ -228,7 +227,6 @@ const Home = () => {
         <CustomerName>- Alex R.</CustomerName>
       </TestimonialsSection>
 
-      <Footer />
     </HomeContainer>
   );
 };
