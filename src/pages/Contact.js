@@ -30,6 +30,9 @@ const Overlay = styled.div`
   background: rgba(0, 0, 0, 0.3); /* Overlay for readability */
 `;
 
+
+
+
 const ContactTitle = styled(motion.h1)`
 
   font-family: "Roboto Slab", serif;

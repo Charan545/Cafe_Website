@@ -18,6 +18,7 @@ const AboutContainer = styled.div`
   padding: 80px 20px;
 `;
 
+
 // Animated Title
 const Title = styled(motion.h1)`
   font-family: "Playfair Display", serif;
