@@ -31,6 +31,7 @@ const Overlay = styled.div`
 `;
 
 const ContactTitle = styled(motion.h1)`
+
   font-family: "Roboto Slab", serif;
   font-size: 3rem;
   font-weight: 700;
