@@ -209,7 +209,7 @@ const Contact = () => {
           <ContactInfoIcon>
             <FaPhone />
           </ContactInfoIcon>
-          <ContactInfoText>(123) 456-7890</ContactInfoText>
+          <ContactInfoText>7416287202</ContactInfoText>
         </ContactInfoItem>
         <ContactInfoItem>
           <ContactInfoIcon>

@@ -105,7 +105,7 @@ const Menu = () => {
           <MenuItemDescription>
             A high-powered espresso shot with a rich finish. A bold start to your day.
           </MenuItemDescription>
-          <MenuItemPrice>$4.99</MenuItemPrice>
+          <MenuItemPrice>₹249</MenuItemPrice>
         </MenuItemCard>
 
         <MenuItemCard
@@ -117,7 +117,7 @@ const Menu = () => {
           <MenuItemDescription>
             Smooth and creamy, inspired by the elegance of classic cars. Perfect for a relaxing afternoon.
           </MenuItemDescription>
-          <MenuItemPrice>$5.99</MenuItemPrice>
+          <MenuItemPrice>₹199</MenuItemPrice>
         </MenuItemCard>
 
         <MenuItemCard
@@ -129,7 +129,7 @@ const Menu = () => {
           <MenuItemDescription>
             Smooth, chilled, and packed with energy like a turbocharged engine. Refreshing and powerful.
           </MenuItemDescription>
-          <MenuItemPrice>$6.50</MenuItemPrice>
+          <MenuItemPrice>₹299</MenuItemPrice>
         </MenuItemCard>
 
         <MenuItemCard
@@ -141,7 +141,7 @@ const Menu = () => {
           <MenuItemDescription>
             The perfect balance of espresso, steamed milk, and foam for an iconic coffee experience.
           </MenuItemDescription>
-          <MenuItemPrice>$3.99</MenuItemPrice>
+          <MenuItemPrice>₹249</MenuItemPrice>
         </MenuItemCard>
 
         <MenuItemCard
@@ -153,7 +153,7 @@ const Menu = () => {
           <MenuItemDescription>
             Freshly baked, with a touch of sweetness to complement your coffee. A perfect pairing.
           </MenuItemDescription>
-          <MenuItemPrice>$2.50</MenuItemPrice>
+          <MenuItemPrice>₹129</MenuItemPrice>
         </MenuItemCard>
       </MenuItemsSection>
 
