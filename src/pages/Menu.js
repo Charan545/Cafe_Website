@@ -113,11 +113,71 @@ const Menu = () => {
           animate="visible"
           variants={fadeIn}
         >
+          <MenuItemTitle>🏁 Drag Race Mocha</MenuItemTitle>
+          <MenuItemDescription>
+          A rich chocolate-infused coffee for high-speed energy.
+          </MenuItemDescription>
+          <MenuItemPrice>₹279</MenuItemPrice>
+        </MenuItemCard>
+
+        <MenuItemCard
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+        >
+          <MenuItemTitle>🛞 Alloy Wheels Cappuccino</MenuItemTitle>
+          <MenuItemDescription>
+          Perfectly balanced cappuccino with a velvety texture.
+          </MenuItemDescription>
+          <MenuItemPrice>₹259</MenuItemPrice>
+        </MenuItemCard>
+
+        <MenuItemCard
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+        >
           <MenuItemTitle>🚗 Vintage Latte</MenuItemTitle>
           <MenuItemDescription>
             Smooth and creamy, inspired by the elegance of classic cars. Perfect for a relaxing afternoon.
           </MenuItemDescription>
           <MenuItemPrice>₹199</MenuItemPrice>
+        </MenuItemCard>
+
+        <MenuItemCard
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+        >
+          <MenuItemTitle>🛞 Alloy Wheels Cappuccino</MenuItemTitle>
+          <MenuItemDescription>
+          Perfectly balanced cappuccino with a velvety texture.
+          </MenuItemDescription>
+          <MenuItemPrice>₹259</MenuItemPrice>
+        </MenuItemCard>
+
+        <MenuItemCard
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+        >
+          <MenuItemTitle>🚦 Signal Stop Iced Tea</MenuItemTitle>
+          <MenuItemDescription>
+          A refreshing iced tea with a hint of citrus.
+          </MenuItemDescription>
+          <MenuItemPrice>₹199</MenuItemPrice>
+        </MenuItemCard>
+
+        <MenuItemCard
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+        >
+          <MenuItemTitle>🛢️ Engine Oil Hot Chocolate</MenuItemTitle>
+          <MenuItemDescription>
+          A dark, rich, and creamy hot chocolate.
+          </MenuItemDescription>
+          <MenuItemPrice>₹279</MenuItemPrice>
         </MenuItemCard>
 
         <MenuItemCard
