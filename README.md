@@ -12,7 +12,13 @@ AUREVRA Cafe Website is a themed digital cafe platform inspired by automobiles, 
 
 ## Installation
 1. Clone the repository:
-
+https://github.com/Charan545/Cafe_Website.git
+2. Navigate to the project directory:
+cd aurevra-cafe-website
+3. Install dependencies (if using any package manager):
+npm install
+4. Run the site locally:
+npm start
 
 # Getting Started with Create React App
 
