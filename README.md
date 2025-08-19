@@ -1,3 +1,19 @@
+# AUREVRA Cafe Website
+
+## Overview
+AUREVRA Cafe Website is a themed digital cafe platform inspired by automobiles, providing users with a seamless online experience for browsing menus, making reservations, and engaging with the brand.
+
+## Features
+- Responsive and attractive UI design with automobile theme  
+- Online menu browsing with detailed descriptions  
+- Reservation system for table bookings  
+- Customer feedback and contact form  
+- Mobile-friendly and cross-browser compatible design
+
+## Installation
+1. Clone the repository:
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
