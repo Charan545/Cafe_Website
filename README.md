@@ -1,5 +1,8 @@
 # AUREVRA Cafe Website
 
+![Screenshot](Website.png)
+
+
 ## Overview
 AUREVRA Cafe Website is a themed digital cafe platform inspired by automobiles, providing users with a seamless online experience for browsing menus, making reservations, and engaging with the brand.
 
